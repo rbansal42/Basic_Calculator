@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-// This function is responsible for getting user to choose the right option 
-
-// void choice(a) {
-// }
 
 // This is the addition function
 int addition(int a, int b) {
@@ -24,29 +20,20 @@ int multiply(int a, int b) {
 }
 
 // This is the division function
-int divide(float a, float b) {
+float divide(float a, float b) {
     float c = a/b;
     return c;
 }
 
-int main() {
+// This function is responsible for getting user to choose the right option 
+void choice(void) {
 
-    printf("Welcome to Basic Calculator. An app that can be precisely categorised as: 'A Basic Calculator'.\n");
-    printf("Since we're basic, we have no GUI.\n");
-    printf("So, which operation do you want to perform?\n");
-    printf("Here are the supported operations... \n\n");
-
-    printf("Addition:\t1 \n");
-    printf("Subtraction:\t2 \n");
-    printf("Division:\t3 \n");
-    printf("Multiplication:\t4 \n");
-
-    int choice = 0, a, b, result;
+    int option = 0, a, b, result;
 
     printf("\nChoose your poison: ");
-    scanf("%d", &choice);
+    scanf("%d", &option);
 
-    switch (choice)
+    switch (option)
     {
     case 1:
         
@@ -103,8 +90,9 @@ int main() {
         printf("Input b: ");
         scanf("%d", &b);
 
-        result = divide(a,b);
-        printf("%d / %d = %f", a, b, result);
+        float d=a,e=b, result1;
+        result1 = divide(d,e);
+        printf("%f / %f = %f", d, e, result1);
 
         break;
 
@@ -113,8 +101,25 @@ int main() {
         printf("Looks like you're a noob and can't even type right.\n");
         printf("Invalid option. Try again.");
 
-        return 0;
+        choice();
         break;
     }
+
+}
+
+
+int main() {
+
+    printf("Welcome to Basic Calculator. An app that can be precisely categorised as: 'A Basic Calculator'.\n");
+    printf("Since we're basic, we have no GUI.\n");
+    printf("So, which operation do you want to perform?\n");
+    printf("Here are the supported operations... \n\n");
+
+    printf("Addition:\t1 \n");
+    printf("Subtraction:\t2 \n");
+    printf("Division:\t3 \n");
+    printf("Multiplication:\t4 \n");
+
+    choice();
 
     }
