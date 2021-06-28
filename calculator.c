@@ -117,8 +117,8 @@ int main() {
 
     printf("Addition:\t1 \n");
     printf("Subtraction:\t2 \n");
-    printf("Division:\t3 \n");
-    printf("Multiplication:\t4 \n");
+    printf("Multiplication:\t3 \n");
+    printf("Divide:\t4 \n");
 
     choice();
 
